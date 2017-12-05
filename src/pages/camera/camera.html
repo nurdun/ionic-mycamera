@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>camera</ion-title>
+  </ion-navbar>
+  <!-- <ion-buttons end> -->
+      <ion-buttons end>
+        <button ion-button icon-only (click)="openPic()">
+          <ion-icon name="folder"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="changeFilter()">
+          <ion-icon name="color-filter"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="reverseCamera()">
+          <ion-icon name="reverse-camera"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="takePicture()">
+          <ion-icon name="camera"></ion-icon>
+        </button>
+      </ion-buttons>
+</ion-header>
+
+<ion-content padding>
+    <div class="camera-preview-container" #cameraPreviewContainer></div>
+    <!-- <button ion-button block (click)="crop()">裁剪图片</button> -->
+    <img style="position:absolute;top:5px;left:0;" src="{{cropSrc}}">
+    <!-- <button ion-button block (click)="details('https://github.com/AlloyTeam/AlloyCrop')">API</button> -->
+</ion-content>
